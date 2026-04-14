@@ -36,6 +36,7 @@ const AppRoutes = () => {
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route element={<AdminProtectedRoute />}>
+        <Route path="/admin" element={<Navigate to="/admin/dashboard" replace />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/users" element={<AllUsers />} />
           <Route path="/admin/students" element={<ManageStudents />} />
