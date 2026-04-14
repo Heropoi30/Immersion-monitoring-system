@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3000/api/v1", // change if deployed
+  baseURL: `${import.meta.env.VITE_API_URL}/api/v1`, // change if deployed
 });
 
 API.interceptors.request.use((config) => {
@@ -16,7 +16,7 @@ API.interceptors.request.use((config) => {
 
 // Admin API instance
 const AdminAPI = axios.create({
-  baseURL: "http://localhost:3000/api/v1",
+  baseURL: `${import.meta.env.VITE_API_URL}/api/v1`,
 });
 
 AdminAPI.interceptors.request.use((config) => {
