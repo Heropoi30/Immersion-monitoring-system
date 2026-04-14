@@ -781,10 +781,10 @@ h1, h2 {
   .forgot-password-link {
     font-size: 0.95rem;
   }
-}
 
-/* Large laptop and desktop screens */
-@media (min-width: 1440px) {
+
+
+  @media (min-width: 1440px) {
   .auth-shell {
     grid-template-columns: minmax(400px, 1fr) minmax(480px, 0.7fr);
   }
