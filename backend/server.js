@@ -6,7 +6,10 @@ const connectDB = require('./src/config/db');
 
 const app = express();
 
-connectDB();
+app.use(cors({
+  origin: "https://immersion-monitoring-system-5loe.vercel.app",
+  credentials: true
+}));
 
 app.use(cors());
 app.use(express.json());
